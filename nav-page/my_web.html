@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>my web</title>
+    <style>
+        /*computer*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+        /* font-family: 'Mukta', sans-serif; */
+
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+        /* font-family: 'Edu NSW ACT Foundation', cursive; */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background-color: #f9fdff;
+            font-family: 'Mukta', sans-serif;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .header {
+            /* background: #f8ecc9; */
+            background-color: #FFF4E6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo {
+            width: 300px;
+            /* background-color: hsl(0, 75%, 79%); */
+            text-align: center;
+
+        }
+
+        /* 標題 */
+        .logo>a {
+            width: 100%;
+            font-weight: bold;
+            color: #95A0BB;
+            line-height: 100px;
+            text-decoration: none;
+            font-size: 30px;
+            letter-spacing: 3px;
+            display: block;
+        }
+
+        .menu_icon {
+            display: none;
+        }
+
+        /* 選單 */
+        .list>ul {
+            list-style-type: none;
+            display: flex;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            flex-direction: row;
+        }
+
+        .list>ul>li {
+            background-color: #FFF4E6;
+            /* background-color: #f8ecc9; */
+        }
+
+        .list>ul>li>a {
+            display: flex;
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-right: 10px;
+            color: #a79c8e;
+            line-height: 60px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .list>ul>li>a:hover {
+            font-weight: 900;
+            animation: word 3s infinite;
+            animation: list_border 1s infinite;
+        }
+
+        .list_border {
+            border: 1px solid #948671;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @keyframes word {
+            0% {
+                color: #626D86;
+            }
+
+            100% {
+                color: #ae99d3;
+            }
+        }
+
+        @keyframes list_border {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+
+            }
+        }
+
+        /* 第一個section */
+        #latest {
+            /* background-color: #e6dcce; */
+            /* background-image: linear-gradient(to bottom, #f8ecc9, #f5e9ca, #f2e6cb, #efe3cc, #ebe0cd, #e5dac9, #ded4c4, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598); */
+            background-image: linear-gradient(to bottom, #fff4e6, #faefe1, #f5ebdd, #f1e6d8, #ece2d4, #e5dbcd, #dfd5c7, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598);
+
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            height: 510px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        img {
+            border: #f9fdff solid 20px;
+            box-sizing: border-box;
+            box-shadow: 8px 8px 10px #888;
+
+        }
+
+        .topic {
+            text-align: center;
+            font-size: 26px;
+            text-transform: uppercase;
+        }
+
+        /* 歌單 */
+        .description {
+            border-radius: 10%;
+            width: 80%;
+            height: 90%;
+            background-image: url('images/bg.png');
+            background-size: 100% 100%;
+            /* background-color: transparent; */
+            /* background: hsl(330, 25%, 83%); */
+            /* background-image: linear-gradient(to bottom, #ebcfdd, #e7cbd9, #e3c6d5, #e0c2d2, #dcbece, #d8bbca, #d5b7c7, #d1b4c3, #ccb0bf, #c7adbb, #c3a9b7, #bea6b3); */
+            /* background-image: linear-gradient(to bottom, #cfd5e3, #cbd1e0, #c7cddd, #c3cada, #bfc6d7, #b9c0d4, #b2bbd2, #acb5cf, #a1accc, #97a4c9, #8c9bc5, #8193c2); */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 8px 8px 10px #888;
+
+        }
+
+        .description>ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            list-style-position: inside;
+            height: 70%;
+            width: 85%;
+        }
+
+        .description>ul>li {
+            width: 50%;
+            text-align: center;
+            list-style-position: outside;
+            list-style-type: decimal-leading-zero;
+            font-weight: bold;
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            line-height: 28px;
+            margin-left: 20px
+        }
+
+        .topic::selection {
+            color: #8517a1;
+            text-decoration: underline;
+        }
+
+        .description>ul>li::selection {
+            color: #8517a1;
+        }
+
+
+        .listen:link {
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            color: #6c4ba3;
+        }
+
+        .listen:visited {
+            color: #6c4ba3;
+        }
+
+        .listen:hover {
+            color: #957fba;
+        }
+
+        .listen:active {
+            color: #b3a3ce;
+        }
+
+        /* 第二個section */
+        #albums {
+            background-color: #E6DCCE;
+
+            /* background-color: rgb(216, 190, 203); */
+            /* background-image: linear-gradient(to top, #ffeecb, #fbeacc, #f6e7cc, #f2e3cd, #ede0cd, #e6dac9, #dfd4c4, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598); */
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .shortcut {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0px;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: space-evenly;
+        }
+
+        .shortcut>li {
+            border-radius: 50%;
+            background-color: #f4e7d3;
+            text-align: center;
+            margin: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 100px;
+            width: 15%;
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            box-shadow: 0px 5px 6px #888;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .shortcut>li:hover {
+            background-color: #95A0BB;
+            cursor: pointer;
+            color: #fff4e6;
+        }
+
+        .shortcut>li::selection {
+            color: #888;
+        }
+
+        .shortcut>li:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .shortcut>li:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .shortcut>li:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .shortcut>li:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .shortcut>li:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .shortcut>li:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .shortcut>li:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .shortcut>li:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+
+        .shortcut>li:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(300px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* 第三個section */
+        #Photo {
+            background-color: #E6DCCE;
+            /* background-color: #e6dcce; */
+            /* background-image: linear-gradient(to bottom, #ffeecb, #fbeacc, #f6e7cc, #f2e3cd, #ede0cd, #e6dac9, #dfd4c4, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598); */
+        }
+
+        .photo-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 20px;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        .photo-list>li {
+            font-size: 18px;
+            flex-wrap: wrap;
+            text-align: left;
+            width: 30%;
+            margin-bottom: 1%;
+        }
+
+        .awards-title {
+            text-align: center;
+            display: block;
+        }
+
+        .awards-title::selection {
+            color: #6117a1;
+        }
+
+        .photo-box {
+            /* background-color: rgb(216, 190, 203); */
+            background-color: transparent;
+            border: 10px double #AEA598;
+            box-sizing: border-box;
+            padding: 1.5%;
+            border-radius: 40px;
+            text-align: justify;
+        }
+
+        .photo-box::selection {
+            color: #6117a1;
+        }
+
+        /* footer */
+        footer {
+            background: #95A0BB;
+            padding: 20px;
+        }
+
+        footer p {
+            width: 80%;
+            margin: auto;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: "Mukta";
+        }
+
+        /* phone */
+        @media screen and (max-width: 500px) {
+            .header {
+                background-color: #FFF4E6;
+                flex-wrap: wrap;
+                align-items: stretch;
+                justify-content: space-between;
+            }
+
+            .logo>a {
+                line-height: 80px;
+                background-color: #FFF4E6;
+            }
+
+            .menu_icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #95A0BB;
+                color: lavender;
+                font-weight: bold;
+                width: 50px;
+
+            }
+
+            .menu_icon::before {
+                content: "";
+                position: relative;
+                width: 1em;
+                height: 0.2em;
+                border-top: 0.6em double white;
+                border-bottom: 0.2em solid white;
+            }
+
+            #latest {
+                background-image: linear-gradient(to bottom, #fff4e6, #faefe1, #f5ebdd, #f1e6d8, #ece2d4, #e5dbcd, #dfd5c7, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598);
+            }
+
+            .list {
+                width: 100%;
+            }
+
+            .list>ul {
+                flex-direction: column;
+            }
+
+            .list>ul>li {
+                text-align: center;
+                background-color: #E6DCCE;
+            }
+
+            .list>ul>li:not(.border) {
+                border-bottom: 1px solid #a79c8e;
+            }
+
+
+
+            .list>ul>li>a {
+                justify-content: center;
+                justify-items: stretch;
+                line-height: 60px;
+                margin: 0px;
+            }
+
+            .list>ul>li>a:hover {
+                background-color: #B1AB99;
+                color: white;
+
+            }
+
+            /* 第一個section */
+            .container {
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .img {
+                width: 100%;
+                flex: 1 1 0;
+                margin: 20px 0px;
+                box-shadow: 0px 5px 10px #888;
+            }
+
+            .description {
+                width: 100%;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0px 5px 10px #888;
+                padding: 20px 0px;
+            }
+
+            .description>ul {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-content: space-evenly;
+                padding: 20px 0px;
+            }
+
+            .description>ul>li {
+                width: 96%;
+            }
+
+            #albums {
+                background-image: linear-gradient(to top, #fff4e6, #faefe1, #f5ebdd, #f1e6d8, #ece2d4, #e5dbcd, #dfd5c7, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598);
+            }
+
+            #Photo {
+                background-image: linear-gradient(to bottom, #fff4e6, #faefe1, #f5ebdd, #f1e6d8, #ece2d4, #e5dbcd, #dfd5c7, #d8cec0, #cdc4b6, #c3b9ac, #b8afa2, #aea598);
+            }
+
+            .photo-box {
+                border: 10px double #928a7d;
+            }
+
+            .shortcut {
+                flex-direction: column;
+            }
+
+            .shortcut>li {
+                width: 80%;
+                margin: 10px auto;
+            }
+
+            .photo-list {
+                flex-wrap: wrap;
+            }
+
+            .photo-list>li {
+                width: 90%;
+                margin: 10px auto;
+            }
+
+            .photo-box {
+                padding: 20px;
+
+            }
+
+            .photo-list>li:nth-child(1) {
+                order: 1;
+            }
+
+            .photo-list>li:nth-child(2) {
+                order: 4;
+            }
+
+            .photo-list>li:nth-child(3) {
+                order: 5;
+            }
+
+            .photo-list>li:nth-child(4) {
+                order: 2;
+            }
+
+            .photo-list>li:nth-child(5) {
+                order: 3;
+            }
+
+            .photo-list>li:nth-child(6) {
+                order: 6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><a href="my_web.html">TAYLOR SWIFT</a></div>
+        <div class="menu_icon"></div>
+        <nav class="list">
+            <ul>
+                <li><a href="my_web.html">Home</a></li>
+                <li><a href="https://www.taylorswift.com/">Official</a></li>
+                <li><a href="#albums">Albums</a></li>
+                <li class="border"><a href="#latest"> <span class="list_border"> Latest</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <div id="Banner"></div> -->
+
+    <section id="latest">
+        <div class="container">
+            <a href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3"><img src="images/midnight.png" alt="taylor"
+                    title="Listen now" width="90%" class="img"></a>
+            <div class="description">
+                <h1 class="topic">Midnights</h1>
+                <ul>
+                    <li>Lavender Haze</li>
+                    <li>Maroon</li>
+                    <li>Anti-Hero</li>
+                    <li>Snow On The Beach</li>
+                    <li>You're On Your Own, Kid</li>
+                    <li>Midnight Rain</li>
+                    <li>Question...?</li>
+                    <li>Vigilante Shit</li>
+                    <li>Bejeweled</li>
+                    <li>Labyrinth</li>
+                    <li>Karma</li>
+                    <li>Sweet Nothing</li>
+                    <li>Mastermind</li>
+                    <li>The Great War</li>
+                    <li>Bigger Than the Whole Sky</li>
+                    <li>Paris</li>
+                    <li>High Infidelity</li>
+                    <li>Glitch</li>
+                    <li>Would've, Could've, Should've</li>
+                    <li>Dear Reader</li>
+                    <li>Hits Different</li>
+                </ul>
+                <a href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3" class="listen"> <i
+                        class="fas fa-play"></i> &nbsp; Listen now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="albums">
+        <h1 class="topic">Albums</h1>
+        <ul class="shortcut">
+            <li>Taylor Swift</li>
+            <li>Fearless</li>
+            <li>Speak Now</li>
+            <li>Red</li>
+            <li>1989</li>
+            <li>Reputation</li>
+            <li>Lover</li>
+            <li>Folklore</li>
+            <li>Evermore</li>
+            <li>Midnights</li>
+        </ul>
+    </section>
+
+    <section id="Photo">
+        <ul class="photo-list">
+            <li> <img src="images/awards1.jpg" width="100%" alt="2023 Grammy Awards"> </li>
+            <li class="photo-box"><b class="awards-title">2022 MTV Video Music Awards</b><br>　　Taylor Swift took
+                home the
+                night’s biggest
+                prize
+                –
+                and announced a new album – during the 2022 MTV Video Music Awards, a chaotic, bleep-heavy show that
+                nodded to music phenomena past and present, and featured a surprise appearance by Johnny Depp.
+
+                Swift, who won best longform video and video of the year for All Too Well (10 Minute Version) for her
+                2021 re-recorded album Red, was the only artist to double-up on televised awards.
+
+            </li>
+
+            <li><img src="images/awards2.jpg" width="100%" alt="2023 Grammy Awards"></li>
+            <li class="photo-box"><b class="awards-title">2023
+                    Grammy Awards:
+                    Best Music Video for 'All Too Well: The Short Film'</b><br>　　Taylor Swift won the GRAMMY for
+                Best Music Video at the 2023 GRAMMYs thanks to "All Too Well: The Short Film," becoming the first artist
+                to win the category with a sole directing credit for their own music video.
+
+                Though Swift wasn’t there to accept the award herself, her video co-producer, Saul Germaine, delivered a
+                short-and-sweet speech thanking Swift as well as the video's team and two stars, Sadie Sink and Dylan
+                O’Brien.
+                <!-- "It was an incredible honor to tell this story with you," Germaine said.
+
+                Swift is no stranger to making GRAMMY history, as she became the first female artist to win the
+                prestigious Album Of The Year GRAMMY three times in 2021 with her win for folklore. This is also not her
+                first win in the Best Music Video category, either, as she won the award for "Bad Blood" in 2016. -->
+            </li>
+            <li><img src="images/awards3.jpg" width="100%" alt="2023 Grammy Awards"></li>
+            <li class="photo-box"><b class="awards-title">2022
+                    American Music Awards</b><br>　　Taylor Swift may not be having good luck in the touring arena at
+                the moment, but her awards show success is unbroken. The singer smashed her own record to remain the
+                most decorated American Music Award winner of all time. Swift took home all six awards she was up for
+                during the Sunday, Nov. 20 ceremony, including Artist of the Year. Swift now has 40 AMA wins under her
+                belt, the most of any artist in the show’s history.
+                <!-- In addition to Artist of the Year, Swift took home
+                Favorite Country Album, Favorite Pop Album, and Favorite Music Video for her 2022 Red (Taylor’s Version)
+                rerelease. -->
+                <!-- (Back in 2013, Swift’s Red also took home Favorite Country Album.) Swift also won Favorite
+                Female Pop Artist and Favorite Female Country artist.
+
+                Wearing a shimmery gold jumpsuit with her wavy bangs swept to the side a la her “Our Song” era, Swift
+                thanked her fans in a touching acceptance speech for Artist of the Year, saying that they gave her the
+                encouragement to release the most music she ever has over the last few years. -->
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Copyright&copy;2023 TaylorSwift.com</p>
+    </footer>
+</body>
+
+</html>

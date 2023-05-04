@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+    /* font-family: 'Roboto Condensed', sans-serif; */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --word-color: #444;
+
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    h1 {
+        color: var(--word-color);
+
+    }
+
+    .box {
+        background-color: antiquewhite;
+        width: 500px;
+        height: 500px;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+
+    #username {
+        width: 50%;
+    }
+
+    #pwd {
+        width: 50%;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Login Information</h1>
+            <label for=""></label>
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+            <input type="password" name="pwd" id="pwd" placeholder="Enter Password">
+            <input type="submit" value="Log in">
+        </div>
+    </div>
+</body>
+
+</html>
